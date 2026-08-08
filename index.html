@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmed Dezan Tours – Zanzibar</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="./images/logo.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta property="og:title" content="Ahmed Dezan Tours – Zanzibar" />
+    <meta
+      property="og:description"
+      content="Discover the Spice Island with Ahmed Dezan Tours. Explore Zanzibar's pristine beaches, rich culture, and unforgettable experiences."
+    />
+    <meta
+      property="og:image"
+      content="https://sulers.github.io/dezantours/images/prev.jpg"
+    />
+    <meta property="og:url" content="https://sulers.github.io/dezantours/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ahmed Dezan Tours – Zanzibar" />
+    <meta
+      name="twitter:description"
+      content="Discover the Spice Island with Ahmed Dezan Tours. Explore Zanzibar's pristine beaches, rich culture, and unforgettable experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sulers.github.io/dezantours/images/prev.jpg"
+    />
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <i class="fas fa-umbrella-beach"></i>
+          <span>Ahmed<span class="logo-accent">Dezan</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#packages-6" class="nav-link">6 Days Packages</a></li>
+          <li><a href="#packages-3" class="nav-link">3 Days Packages</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Zanzibar • Tanzania</span>
+        <h1 class="hero-title">Discover the<br />Spice Island</h1>
+        <p class="hero-subtitle">
+          White sand beaches, turquoise waters, and centuries of culture —<br />your
+          dream island escape begins here.
+        </p>
+        <div class="hero-actions">
+          <a href="#packages-6" class="btn btn-primary">Explore Packages</a>
+          <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ===== IMAGE GALLERY (horizontal scroll + modal) ===== -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-label">Gallery</div>
+        <h2 class="section-title">Moments from Zanzibar</h2>
+        <p class="section-subtitle">Click any image to view in full size</p>
+      </div>
+      <div class="gallery-scroll" id="galleryScroll">
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80"
+        >
+          <img src="./images/0.jpg" alt="Zanzibar beach" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80"
+        >
+          <img src="./images/1.jpeg" alt="Zanzibar beach" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80"
+        >
+          <img src="./images/17.jpeg" alt="Stone Town" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1590523278191-995cbcda646b?w=800&q=80"
+        >
+          <img src="./images/20.jpeg" alt="Indian Ocean" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1586103511502-7e26ecb22676?w=800&q=80"
+        >
+          <img src="./images/13.jpeg" alt="Spices" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80"
+        >
+          <img src="./images/23.jpeg" alt="Dhow boat" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80"
+        >
+          <img src="./images/24.jpeg" alt="Turtle" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1586500036709-41963de24d8b?w=800&q=80"
+        >
+          <img src="./images/7.jpeg" alt="Market" loading="lazy" />
+        </div>
+        <div
+          class="gallery-item"
+          data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+        >
+          <img src="./images/6.jpeg" alt="Sunset" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6 DAYS PACKAGES ===== -->
+    <section class="packages-section" id="packages-6">
+      <div class="container">
+        <div class="section-label">Packages</div>
+        <h2 class="section-title">6 Days Island Tour</h2>
+        <p class="section-subtitle">
+          Experience the very best of Zanzibar over six unforgettable days
+        </p>
+
+        <!-- ===== INCLUDES SECTION (NEW) ===== -->
+        <div class="includes-section">
+          <h3>What's Included in Every Package</h3>
+          <div class="includes-grid">
+            <div><i class="fas fa-car"></i> Pick up & drop off</div>
+            <div><i class="fas fa-receipt"></i> Government taxes</div>
+            <div><i class="fas fa-ticket-alt"></i> Entrance fees</div>
+            <div><i class="fas fa-user-tie"></i> Guide</div>
+            <div><i class="fas fa-water"></i> Bottle of water</div>
+            <div><i class="fas fa-utensils"></i> Seafood / Chicken lunch</div>
+            <div><i class="fas fa-apple-alt"></i> Fresh fruits</div>
+            <div><i class="fas fa-plane"></i> Free airport transfer</div>
+            <div><i class="fas fa-wifi"></i> Free WiFi</div>
+          </div>
+          <p class="all-inclusive-badge">
+            <i class="fas fa-check-circle"></i> All-inclusive – one single fee
+            covers everything!
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Day 1 -->
+          <div class="package-card" data-package="day1-6">
+            <div class="package-image">
+              <img src="./images/33.jpeg" alt="Spice Farm" loading="lazy" />
+              <span class="package-day">Day 1</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm + Prison Island + Stone Town
+              </h3>
+              <p class="package-desc">
+                Discover Zanzibar's famous spices, meet giant tortoises, and
+                wander the historic streets of Stone Town.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="package-card" data-package="day2-6">
+            <div class="package-image">
+              <img src="./images/32.jpeg" alt="Mnemba Island" loading="lazy" />
+              <span class="package-day">Day 2</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Mnemba Island &amp; Sunset Cruise</h3>
+              <p class="package-desc">
+                Snorkel crystal-clear waters, swim with dolphins, and enjoy a
+                magical sunset cruise at Kendwa Beach.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="package-card" data-package="day3-6">
+            <div class="package-image">
+              <img src="./images/3.jpeg" alt="Jozani Forest" loading="lazy" />
+              <span class="package-day">Day 3</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Jozani Forest + Salaam Cave + The Rock
+              </h3>
+              <p class="package-desc">
+                Spot rare red colobus monkeys, swim in natural cave pools, and
+                dine at Zanzibar's iconic Rock Restaurant.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day3-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="package-card" data-package="day4-6">
+            <div class="package-image">
+              <img src="./images/5.jpeg" alt="Safari Blue" loading="lazy" />
+              <span class="package-day">Day 4</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Safari Blue</h3>
+              <p class="package-desc">
+                Sail on a traditional dhow, snorkel vibrant reefs, and enjoy a
+                seafood barbecue on a pristine sandbank.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day4-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="package-card" data-package="day5-6">
+            <div class="package-image">
+              <img src="./images/34.jpeg" alt="Cooking class" loading="lazy" />
+              <span class="package-day">Day 5</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Village Visit &amp; Cooking Class</h3>
+              <p class="package-desc">
+                Immerse yourself in local culture, visit a traditional village,
+                and learn to cook authentic Zanzibari dishes.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day5-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 6 -->
+          <div class="package-card" data-package="day6-6">
+            <div class="package-image">
+              <img src="./images/11.jpeg" alt="Paje Beach" loading="lazy" />
+              <span class="package-day">Day 6</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Starfish at Pingwe + Paje Beach</h3>
+              <p class="package-desc">
+                See beautiful starfish in their natural habitat and relax on the
+                stunning white sands of Paje Beach.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day6-6"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Table 6 Days -->
+        <div class="pricing-table">
+          <h4>6 Days Package — Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span>1 person</span> <strong>$800</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>2 people</span> <strong>$480</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>2–5 people</span> <strong>$420</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>5–10 people</span> <strong>$350</strong>
+              <span>per person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">
+              Let's Plan Your<br />Zanzibar Adventure
+            </h2>
+            <p class="section-subtitle">
+              Reach out to us and we'll help you craft the perfect island
+              itinerary.
+            </p>
+            <ul class="contact-details">
+              <li>
+                <i class="fas fa-phone"></i> <span>+255 711 322 064</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>ahmeddezanzibar99@gmail.com</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Stone Town, Zanzibar, Tanzania</span>
+              </li>
+            </ul>
+            <div class="contact-socials">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Tell us about your dream trip..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3 DAYS PACKAGES ===== -->
+    <section class="packages-section" id="packages-3">
+      <div class="container">
+        <div class="section-label">Packages</div>
+        <h2 class="section-title">3 Days Island Tour</h2>
+        <p class="section-subtitle">
+          A shorter escape packed with Zanzibar's most iconic experiences
+        </p>
+
+        <div class="packages-grid">
+          <!-- Day 1 -->
+          <div class="package-card" data-package="day1-3">
+            <div class="package-image">
+              <img src="./images/38.jpeg" alt="Jozani Forest" loading="lazy" />
+              <span class="package-day">Day 1</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Jozani Forest + Salaam Cave + The Rock
+              </h3>
+              <p class="package-desc">
+                Explore the lush Jozani Forest, swim in Salaam Cave, and dine at
+                the iconic Rock Restaurant.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day1-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="package-card" data-package="day2-3">
+            <div class="package-image">
+              <img src="./images/14.jpeg" alt="Mnemba Island" loading="lazy" />
+              <span class="package-day">Day 2</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Mnemba Island — Swimming with Dolphins
+              </h3>
+              <p class="package-desc">
+                Swim alongside wild dolphins, snorkel vibrant coral reefs, and
+                relax on Mnemba's pristine sandbank.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day2-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="package-card" data-package="day3-3">
+            <div class="package-image">
+              <img src="./images/21.jpeg" alt="Spice Farm" loading="lazy" />
+              <span class="package-day">Day 3</span>
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">
+                Spice Farm + Prison Island + Stone Town
+              </h3>
+              <p class="package-desc">
+                Experience the Spice Island, visit Prison Island's tortoises,
+                and explore historic Stone Town.
+              </p>
+              <button
+                class="btn btn-outline package-more"
+                data-package="day3-3"
+              >
+                More Info <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Table 3 Days -->
+        <div class="pricing-table">
+          <h4>3 Days Package — Pricing</h4>
+          <div class="pricing-grid">
+            <div class="pricing-item">
+              <span>1 person</span> <strong>$520</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>2 people</span> <strong>$290</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>2–5 people</span> <strong>$250</strong>
+              <span>per person</span>
+            </div>
+            <div class="pricing-item">
+              <span>5–10 people</span> <strong>$220</strong>
+              <span>per person</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-label">Testimonials</div>
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <p class="section-subtitle">
+          Real stories from real people who explored Zanzibar with us
+        </p>
+
+        <div class="testimonials-carousel" id="testimonialsCarousel">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "An absolutely magical experience! The 6-day tour was
+                  perfectly curated — every day brought something new and
+                  breathtaking. The team was professional, warm, and made us
+                  feel at home."
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar" style="background: #1a6b6b">
+                    SK
+                  </div>
+                  <div>
+                    <strong>Sarah Kimani</strong>
+                    <span>Nairobi, Kenya</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The 3-day tour was the perfect introduction to Zanzibar. From
+                  swimming with dolphins to the Spice Farm tour, every moment
+                  was unforgettable. Highly recommend!"
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar" style="background: #e76f51">
+                    MR
+                  </div>
+                  <div>
+                    <strong>Michael Roberts</strong>
+                    <span>London, UK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The Safari Blue day was the highlight of our trip! The dhow
+                  cruise, the seafood lunch, the turquoise water — it was pure
+                  paradise. We're already planning our return."
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar" style="background: #f4a261">
+                    AL
+                  </div>
+                  <div>
+                    <strong>Amina Lwanga</strong>
+                    <span>Dar es Salaam, Tanzania</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The cooking class in the village was such a beautiful
+                  cultural experience. We learned so much and the food was
+                  incredible. Zanzibar stole our hearts."
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar" style="background: #2a9d8f">
+                    JC
+                  </div>
+                  <div>
+                    <strong>James &amp; Chloe</strong>
+                    <span>Melbourne, Australia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" id="carouselPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn carousel-next" id="carouselNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="testimonials-cta">
+          <a
+            href="https://www.tripadvisor.com"
+            target="_blank"
+            class="btn btn-tripadvisor"
+          >
+            <i class="fab fa-tripadvisor"></i> See More Reviews
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <i class="fas fa-umbrella-beach"></i>
+              <span>Ahmed<span class="logo-accent">Dezan</span></span>
+            </a>
+            <p>
+              Your gateway to the Spice Island. We craft unforgettable
+              experiences that blend culture, nature, and pure relaxation.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#packages-6">6 Days Packages</a></li>
+              <li><a href="#packages-3">3 Days Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support.html#faq">FAQ</a></li>
+              <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="support.html#privacy">Privacy Policy</a></li>
+              <li>
+                <a href="support.html#cancellation">Cancellation Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Stay Inspired</h4>
+            <p>Subscribe for travel tips and exclusive offers.</p>
+            <form class="footer-form" id="newsletterForm">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Ahmed Dezan Tours. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== MODAL: Image ===== -->
+    <div class="modal" id="imageModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content modal-image-content">
+        <button class="modal-close" id="imageModalClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="Gallery image" id="modalImage" />
+      </div>
+    </div>
+
+    <!-- ===== MODAL: Package details ===== -->
+    <div class="modal" id="packageModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content modal-package-content" id="packageModalContent">
+        <button class="modal-close" id="packageModalClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div id="packageModalBody">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

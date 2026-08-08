@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Ahmed Dezan Tours</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* Extra styles specific to about page */
+        .about-hero {
+            background: linear-gradient(135deg, #0f2b2b 0%, #1a4a4a 100%);
+            padding: 120px 0 60px;
+            color: #fff;
+            text-align: center;
+        }
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            margin-bottom: 12px;
+        }
+        .about-hero p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-section {
+            padding: 72px 0;
+            background: #fff;
+        }
+        .about-section:nth-child(even) {
+            background: #f5f3ee;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .about-grid .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #0f2b2b;
+            margin-bottom: 16px;
+        }
+        .about-grid .content p {
+            color: #4d5f5f;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .about-grid .content ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #4d5f5f;
+            margin-bottom: 16px;
+        }
+        .about-grid .content ul li {
+            margin-bottom: 6px;
+        }
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+        }
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .about-hero h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION (same as index) ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-umbrella-beach"></i>
+                <span>Ahmed<span class="logo-accent">Dezan</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#packages-6" class="nav-link">6 Days Packages</a></li>
+                <li><a href="index.html#packages-3" class="nav-link">3 Days Packages</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Ahmed Dezan Tours</h1>
+            <p>Your trusted partner for unforgettable Zanzibar experiences</p>
+        </div>
+    </section>
+
+    <!-- ===== OUR SERVICES ===== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="content">
+                    <h2>What We Offer</h2>
+                    <p>We are a local tour operator dedicated to showcasing the authentic beauty of Zanzibar. With years of experience, we ensure every journey is seamless, safe, and memorable.</p>
+                    <ul>
+                        <li><strong>Full food coverage</strong> – All meals included, from local delicacies to fresh seafood.</li>
+                        <li><strong>Convenient pickups</strong> – We pick you up from your hotel or airport, no hassle.</li>
+                        <li><strong>Ticket & entry management</strong> – We handle all entrance fees, permits, and reservations.</li>
+                        <li><strong>Flexible itineraries</strong> – Tailor your days to suit your pace and interests.</li>
+                        <li><strong>Fluent guides</strong> – English, Swahili, and other languages available.</li>
+                        <li><strong>Reliable transport</strong> – Modern, air‑conditioned vehicles with professional drivers.</li>
+                    </ul>
+                    <p>We take care of every detail so you can focus on making memories.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./images/30.jpeg" alt="Zanzibar tour" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY US ===== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="./images/9.jpeg" alt="Local culture" loading="lazy" />
+                </div>
+                <div class="content">
+                    <h2>Why Travel With Us</h2>
+                    <p>We believe in creating genuine connections – with the island, its people, and its culture. Our guides are locals who share their passion and insider knowledge.</p>
+                    <ul>
+                        <li>Small group sizes for personal attention.</li>
+                        <li>Commitment to sustainable tourism and community support.</li>
+                        <li>24/7 support during your tour.</li>
+                        <li>Transparent pricing with no hidden costs.</li>
+                    </ul>
+                    <p>Let us show you the Zanzibar you’ve always dreamed of.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/255123456789?text=Hi%20Ahmed%20Dezan%20Tours%2C%20I%20have%20a%20question%20about%20your%20packages." 
+       class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== FOOTER (same as index) ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Ahmed<span class="logo-accent">Dezan</span></span>
+                    </a>
+                    <p>Your gateway to the Spice Island. We craft unforgettable experiences that blend culture, nature, and pure relaxation.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#packages-6">6 Days Packages</a></li>
+                        <li><a href="index.html#packages-3">3 Days Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+    <li><a href="support.html#faq">FAQ</a></li>
+    <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
+    <li><a href="support.html#privacy">Privacy Policy</a></li>
+    <li><a href="support.html#cancellation">Cancellation Policy</a></li>
+</ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Inspired</h4>
+                    <p>Subscribe for travel tips and exclusive offers.</p>
+                    <form class="footer-form" id="newsletterForm">
+                        <input type="email" placeholder="Your email" required />
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ahmed Dezan Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Newsletter form (demo)
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('You\'re subscribed! Check your inbox for island inspiration.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

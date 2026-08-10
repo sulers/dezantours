@@ -1,356 +1,499 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Support – Ahmed Dezan Tours</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <style>
-        /* Support page specific styles */
-        .support-hero {
-            background: linear-gradient(135deg, #0f2b2b 0%, #1a4a4a 100%);
-            padding: 120px 0 60px;
-            color: #fff;
-            text-align: center;
-        }
+      /* Support page specific styles */
+      .support-hero {
+        background: linear-gradient(135deg, #0f2b2b 0%, #1a4a4a 100%);
+        padding: 120px 0 60px;
+        color: #fff;
+        text-align: center;
+      }
+      .support-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3rem;
+        margin-bottom: 8px;
+      }
+      .support-hero p {
+        font-size: 1.2rem;
+        opacity: 0.85;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .support-section {
+        padding: 60px 0 80px;
+        background: #f5f3ee;
+      }
+      .support-section .container {
+        max-width: 820px;
+      }
+      .accordion-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .accordion-item {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        border: 1px solid #eae8e2;
+      }
+      .accordion-header {
+        padding: 20px 28px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #0f2b2b;
+        transition: background 0.2s;
+        user-select: none;
+        background: #fff;
+      }
+      .accordion-header:hover {
+        background: #f8f7f4;
+      }
+      .accordion-header i {
+        transition: transform 0.3s;
+        color: #1a6b6b;
+      }
+      .accordion-item.active .accordion-header i {
+        transform: rotate(180deg);
+      }
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.3s ease;
+        padding: 0 28px;
+        color: #4d5f5f;
+        line-height: 1.7;
+      }
+      .accordion-item.active .accordion-body {
+        max-height: 3000px; /* large enough for content */
+        padding: 0 28px 24px 28px;
+      }
+      .accordion-body p {
+        margin-bottom: 12px;
+      }
+      .accordion-body ul {
+        list-style: disc;
+        padding-left: 22px;
+        margin: 8px 0 16px;
+      }
+      .accordion-body ul li {
+        margin-bottom: 4px;
+      }
+      .floating-whatsapp {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #25d366;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+      .floating-whatsapp:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+      }
+      @media (max-width: 768px) {
         .support-hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 8px;
-        }
-        .support-hero p {
-            font-size: 1.2rem;
-            opacity: 0.85;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .support-section {
-            padding: 60px 0 80px;
-            background: #f5f3ee;
-        }
-        .support-section .container {
-            max-width: 820px;
-        }
-        .accordion-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        .accordion-item {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-            overflow: hidden;
-            border: 1px solid #eae8e2;
+          font-size: 2.4rem;
         }
         .accordion-header {
-            padding: 20px 28px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #0f2b2b;
-            transition: background 0.2s;
-            user-select: none;
-            background: #fff;
-        }
-        .accordion-header:hover {
-            background: #f8f7f4;
-        }
-        .accordion-header i {
-            transition: transform 0.3s;
-            color: #1a6b6b;
-        }
-        .accordion-item.active .accordion-header i {
-            transform: rotate(180deg);
+          padding: 16px 20px;
+          font-size: 1rem;
         }
         .accordion-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s ease;
-            padding: 0 28px;
-            color: #4d5f5f;
-            line-height: 1.7;
+          padding: 0 20px;
         }
         .accordion-item.active .accordion-body {
-            max-height: 3000px; /* large enough for content */
-            padding: 0 28px 24px 28px;
+          padding: 0 20px 20px 20px;
         }
-        .accordion-body p {
-            margin-bottom: 12px;
-        }
-        .accordion-body ul {
-            list-style: disc;
-            padding-left: 22px;
-            margin: 8px 0 16px;
-        }
-        .accordion-body ul li {
-            margin-bottom: 4px;
-        }
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: #25D366;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .floating-whatsapp:hover {
-            transform: scale(1.08);
-            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
-        }
-        @media (max-width: 768px) {
-            .support-hero h1 {
-                font-size: 2.4rem;
-            }
-            .accordion-header {
-                padding: 16px 20px;
-                font-size: 1rem;
-            }
-            .accordion-body {
-                padding: 0 20px;
-            }
-            .accordion-item.active .accordion-body {
-                padding: 0 20px 20px 20px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- ===== NAVIGATION (with Support link) ===== -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <i class="fas fa-umbrella-beach"></i>
-                <span>Ahmed<span class="logo-accent">Dezan</span></span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html#packages-6" class="nav-link">6 Days Packages</a></li>
-                <li><a href="index.html#packages-3" class="nav-link">3 Days Packages</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="support.html" class="nav-link">Support</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <i class="fas fa-umbrella-beach"></i>
+          <span>Ahmed<span class="logo-accent">Dezan</span></span>
+        </a>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="index.html#packages-6" class="nav-link">6 Days Packages</a>
+          </li>
+          <li>
+            <a href="index.html#packages-3" class="nav-link">3 Days Packages</a>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- ===== HERO ===== -->
     <section class="support-hero">
-        <div class="container">
-            <h1>Support &amp; Information</h1>
-            <p>Find answers to common questions, read our policies, and understand your rights and obligations.</p>
-        </div>
+      <div class="container">
+        <h1>Support &amp; Information</h1>
+        <p>
+          Find answers to common questions, read our policies, and understand
+          your rights and obligations.
+        </p>
+      </div>
     </section>
 
     <!-- ===== ACCORDIONS ===== -->
     <section class="support-section" id="support-content">
-        <div class="container">
-            <div class="accordion-group">
-
-                <!-- FAQ -->
-                <div class="accordion-item" id="faq">
-                    <div class="accordion-header">
-                        <span><i class="fas fa-question-circle" style="color:#1a6b6b; margin-right:12px;"></i> Frequently Asked Questions</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <p><strong>Do I need a visa to visit Zanzibar?</strong><br />
-                        Most visitors require a visa. You can apply online or obtain one upon arrival at the airport. We recommend checking with the Tanzanian embassy for the latest requirements.</p>
-                        <p><strong>What is the best time to visit Zanzibar?</strong><br />
-                        The dry seasons (June–October and December–February) offer the best weather. However, Zanzibar is beautiful year-round.</p>
-                        <p><strong>Is the tour suitable for children?</strong><br />
-                        Yes, our tours are family-friendly. We can adjust itineraries to accommodate younger travelers.</p>
-                        <p><strong>What should I pack?</strong><br />
-                        Light clothing, sunscreen, a hat, swimwear, comfortable walking shoes, and a camera. Don't forget insect repellent.</p>
-                        <p><strong>Can I customize my itinerary?</strong><br />
-                        Absolutely! We offer flexible options. Just let us know your preferences and we'll tailor the experience.</p>
-                    </div>
-                </div>
-
-                <!-- Privacy Policy -->
-                <div class="accordion-item" id="privacy">
-                    <div class="accordion-header">
-                        <span><i class="fas fa-lock" style="color:#1a6b6b; margin-right:12px;"></i> Privacy Policy</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <p><strong>Information We Collect</strong><br />
-                        We collect personal information such as names, email addresses, phone numbers, and travel preferences when you book a tour or contact us.</p>
-                        <p><strong>How We Use Your Information</strong><br />
-                        Your data helps us process bookings, communicate with you, and improve our services. We do not sell or share your data with third parties except as required for travel arrangements (e.g., hotels, airlines).</p>
-                        <p><strong>Data Security</strong><br />
-                        We implement industry-standard security measures to protect your information. All payment transactions are encrypted.</p>
-                        <p><strong>Your Rights</strong><br />
-                        You may request access, correction, or deletion of your personal data by contacting us at ahmeddezanzibar99@gmail.com.</p>
-                        <p><strong>Cookies</strong><br />
-                        Our website uses cookies to enhance your experience. You can disable cookies in your browser settings.</p>
-                    </div>
-                </div>
-
-                <!-- Cancellation Policy -->
-                <div class="accordion-item" id="cancellation">
-                    <div class="accordion-header">
-                        <span><i class="fas fa-times-circle" style="color:#1a6b6b; margin-right:12px;"></i> Cancellation Policy</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <p><strong>Flexible Cancellations</strong><br />
-                        We understand that plans change. Our cancellation policy is designed to be fair:</p>
-                        <ul>
-                            <li><strong>More than 30 days before departure:</strong> Full refund (minus any non-refundable deposits).</li>
-                            <li><strong>15–30 days before departure:</strong> 50% refund.</li>
-                            <li><strong>Less than 15 days before departure:</strong> No refund, but we may offer credit toward a future tour.</li>
-                            <li><strong>No-shows:</strong> No refund.</li>
-                        </ul>
-                        <p>For group bookings, cancellation fees apply per person. We recommend travel insurance to cover unforeseen circumstances.</p>
-                        <p>In case of government-imposed travel restrictions, we offer full credit for a later date.</p>
-                    </div>
-                </div>
-
-                <!-- Terms & Conditions -->
-                <div class="accordion-item" id="terms">
-                    <div class="accordion-header">
-                        <span><i class="fas fa-file-contract" style="color:#1a6b6b; margin-right:12px;"></i> Terms &amp; Conditions</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <p><strong>Booking Confirmation</strong><br />
-                        A booking is confirmed upon receipt of a deposit (unless otherwise agreed). Full payment is due 14 days before departure.</p>
-                        <p><strong>Travel Documents</strong><br />
-                        Clients are responsible for ensuring they have valid passports, visas, and any required health certificates. We are not liable for delays or denials due to missing documentation.</p>
-                        <p><strong>Health & Safety</strong><br />
-                        Please inform us of any medical conditions, allergies, or special needs before travel. We will make reasonable accommodations.</p>
-                        <p><strong>Limitation of Liability</strong><br />
-                        While we take every care to ensure your safety, we are not liable for injuries, losses, or damages caused by third-party providers (e.g., hotels, airlines) or events beyond our control (e.g., natural disasters).</p>
-                        <p><strong>Changes to Itinerary</strong><br />
-                        We reserve the right to modify itineraries due to weather, safety, or operational reasons. We will provide alternatives of equal quality.</p>
-                        <p><strong>Governing Law</strong><br />
-                        These terms are governed by the laws of Tanzania. Any disputes shall be resolved in the courts of Zanzibar.</p>
-                    </div>
-                </div>
-
+      <div class="container">
+        <div class="accordion-group">
+          <!-- FAQ -->
+          <div class="accordion-item" id="faq">
+            <div class="accordion-header">
+              <span
+                ><i
+                  class="fas fa-question-circle"
+                  style="color: #1a6b6b; margin-right: 12px"
+                ></i>
+                Frequently Asked Questions</span
+              >
+              <i class="fas fa-chevron-down"></i>
             </div>
+            <div class="accordion-body">
+              <p>
+                <strong>Do I need a visa to visit Zanzibar?</strong><br />
+                Most visitors require a visa. You can apply online or obtain one
+                upon arrival at the airport. We recommend checking with the
+                Tanzanian embassy for the latest requirements.
+              </p>
+              <p>
+                <strong>What is the best time to visit Zanzibar?</strong><br />
+                The dry seasons (June–October and December–February) offer the
+                best weather. However, Zanzibar is beautiful year-round.
+              </p>
+              <p>
+                <strong>Is the tour suitable for children?</strong><br />
+                Yes, our tours are family-friendly. We can adjust itineraries to
+                accommodate younger travelers.
+              </p>
+              <p>
+                <strong>What should I pack?</strong><br />
+                Light clothing, sunscreen, a hat, swimwear, comfortable walking
+                shoes, and a camera. Don't forget insect repellent.
+              </p>
+              <p>
+                <strong>Can I customize my itinerary?</strong><br />
+                Absolutely! We offer flexible options. Just let us know your
+                preferences and we'll tailor the experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Privacy Policy -->
+          <div class="accordion-item" id="privacy">
+            <div class="accordion-header">
+              <span
+                ><i
+                  class="fas fa-lock"
+                  style="color: #1a6b6b; margin-right: 12px"
+                ></i>
+                Privacy Policy</span
+              >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              <p>
+                <strong>Information We Collect</strong><br />
+                We collect personal information such as names, email addresses,
+                phone numbers, and travel preferences when you book a tour or
+                contact us.
+              </p>
+              <p>
+                <strong>How We Use Your Information</strong><br />
+                Your data helps us process bookings, communicate with you, and
+                improve our services. We do not sell or share your data with
+                third parties except as required for travel arrangements (e.g.,
+                hotels, airlines).
+              </p>
+              <p>
+                <strong>Data Security</strong><br />
+                We implement industry-standard security measures to protect your
+                information. All payment transactions are encrypted.
+              </p>
+              <p>
+                <strong>Your Rights</strong><br />
+                You may request access, correction, or deletion of your personal
+                data by contacting us at ahmeddezanzibar99@gmail.com.
+              </p>
+              <p>
+                <strong>Cookies</strong><br />
+                Our website uses cookies to enhance your experience. You can
+                disable cookies in your browser settings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cancellation Policy -->
+          <div class="accordion-item" id="cancellation">
+            <div class="accordion-header">
+              <span
+                ><i
+                  class="fas fa-times-circle"
+                  style="color: #1a6b6b; margin-right: 12px"
+                ></i>
+                Cancellation Policy</span
+              >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              <p>
+                <strong>Flexible Cancellations</strong><br />
+                We understand that plans change. Our cancellation policy is
+                designed to be fair:
+              </p>
+              <ul>
+                <li>
+                  <strong>More than 30 days before departure:</strong> Full
+                  refund (minus any non-refundable deposits).
+                </li>
+                <li>
+                  <strong>15–30 days before departure:</strong> 50% refund.
+                </li>
+                <li>
+                  <strong>Less than 15 days before departure:</strong> No
+                  refund, but we may offer credit toward a future tour.
+                </li>
+                <li><strong>No-shows:</strong> No refund.</li>
+              </ul>
+              <p>
+                For group bookings, cancellation fees apply per person. We
+                recommend travel insurance to cover unforeseen circumstances.
+              </p>
+              <p>
+                In case of government-imposed travel restrictions, we offer full
+                credit for a later date.
+              </p>
+            </div>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="accordion-item" id="terms">
+            <div class="accordion-header">
+              <span
+                ><i
+                  class="fas fa-file-contract"
+                  style="color: #1a6b6b; margin-right: 12px"
+                ></i>
+                Terms &amp; Conditions</span
+              >
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              <p>
+                <strong>Booking Confirmation</strong><br />
+                A booking is confirmed upon receipt of a deposit (unless
+                otherwise agreed). Full payment is due 14 days before departure.
+              </p>
+              <p>
+                <strong>Travel Documents</strong><br />
+                Clients are responsible for ensuring they have valid passports,
+                visas, and any required health certificates. We are not liable
+                for delays or denials due to missing documentation.
+              </p>
+              <p>
+                <strong>Health & Safety</strong><br />
+                Please inform us of any medical conditions, allergies, or
+                special needs before travel. We will make reasonable
+                accommodations.
+              </p>
+              <p>
+                <strong>Limitation of Liability</strong><br />
+                While we take every care to ensure your safety, we are not
+                liable for injuries, losses, or damages caused by third-party
+                providers (e.g., hotels, airlines) or events beyond our control
+                (e.g., natural disasters).
+              </p>
+              <p>
+                <strong>Changes to Itinerary</strong><br />
+                We reserve the right to modify itineraries due to weather,
+                safety, or operational reasons. We will provide alternatives of
+                equal quality.
+              </p>
+              <p>
+                <strong>Governing Law</strong><br />
+                These terms are governed by the laws of Tanzania. Any disputes
+                shall be resolved in the courts of Zanzibar.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ===== FLOATING WHATSAPP ===== -->
-    <a href="https://wa.me/255123456789?text=Hi%20Ahmed%20Dezan%20Tours%2C%20I%20have%20a%20question." 
-       class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://wa.me/255123456789?text=Hi%20Ahmed%20Dezan%20Tours%2C%20I%20have%20a%20question."
+      class="floating-whatsapp"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- ===== FOOTER (updated links point to support.html anchors) ===== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <i class="fas fa-umbrella-beach"></i>
-                        <span>Ahmed<span class="logo-accent">Dezan</span></span>
-                    </a>
-                    <p>Your gateway to the Spice Island. We craft unforgettable experiences that blend culture, nature, and pure relaxation.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html#packages-6">6 Days Packages</a></li>
-                        <li><a href="index.html#packages-3">3 Days Packages</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="support.html#faq">FAQ</a></li>
-                        <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
-                        <li><a href="support.html#privacy">Privacy Policy</a></li>
-                        <li><a href="support.html#cancellation">Cancellation Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Stay Inspired</h4>
-                    <p>Subscribe for travel tips and exclusive offers.</p>
-                    <form class="footer-form" id="newsletterForm">
-                        <input type="email" placeholder="Your email" required />
-                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+              <i class="fas fa-umbrella-beach"></i>
+              <span>Ahmed<span class="logo-accent">Dezan</span></span>
+            </a>
+            <p>
+              Your gateway to the Spice Island. We craft unforgettable
+              experiences that blend culture, nature, and pure relaxation.
+            </p>
+          </div>
+          <div class="socials">
+            <h4>Follow Us</h4>
+            <div class="social-icons" style="display: flex; gap: 20px">
+              <a
+                href="https://www.facebook.com/people/Ahmed-De-Zanzibar/61563605572664/?mibextid=ZbWKwL"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/ahmed_dezanzibar?igsh=MXZ1Z2IxaXFvMHpibA%3D%3D"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/255711322064" aria-label="Whatsapp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Ahmed Dezan Tours. All rights reserved.</p>
-            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html#packages-6">6 Days Packages</a></li>
+              <li><a href="index.html#packages-3">3 Days Packages</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="support.html#faq">FAQ</a></li>
+              <li><a href="support.html#terms">Terms &amp; Conditions</a></li>
+              <li><a href="support.html#privacy">Privacy Policy</a></li>
+              <li>
+                <a href="support.html#cancellation">Cancellation Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Stay Inspired</h4>
+            <p>Subscribe for travel tips and exclusive offers.</p>
+            <form class="footer-form" id="newsletterForm">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Ahmed Dezan Tours. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
-        // ============================================
-        // ACCORDION TOGGLE
-        // ============================================
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', function() {
-                const item = this.parentElement;
-                const isActive = item.classList.contains('active');
+      // ============================================
+      // ACCORDION TOGGLE
+      // ============================================
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", function () {
+          const item = this.parentElement;
+          const isActive = item.classList.contains("active");
 
-                // Close all other accordions (optional: keep only one open)
-                // document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
+          // Close all other accordions (optional: keep only one open)
+          // document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('active'));
 
-                // Toggle this one
-                if (isActive) {
-                    item.classList.remove('active');
-                } else {
-                    item.classList.add('active');
-                }
-            });
+          // Toggle this one
+          if (isActive) {
+            item.classList.remove("active");
+          } else {
+            item.classList.add("active");
+          }
         });
+      });
 
-        // ============================================
-        // Open accordion based on URL hash (if any)
-        // ============================================
-        window.addEventListener('load', function() {
-            const hash = window.location.hash;
-            if (hash) {
-                const target = document.querySelector(hash);
-                if (target && target.classList.contains('accordion-item')) {
-                    target.classList.add('active');
-                    // scroll to it
-                    setTimeout(() => {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 300);
-                }
-            }
-        });
+      // ============================================
+      // Open accordion based on URL hash (if any)
+      // ============================================
+      window.addEventListener("load", function () {
+        const hash = window.location.hash;
+        if (hash) {
+          const target = document.querySelector(hash);
+          if (target && target.classList.contains("accordion-item")) {
+            target.classList.add("active");
+            // scroll to it
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 300);
+          }
+        }
+      });
 
-        // ============================================
-        // NEWSLETTER (demo)
-        // ============================================
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('You\'re subscribed! Check your inbox for island inspiration.');
-            this.reset();
+      // ============================================
+      // NEWSLETTER (demo)
+      // ============================================
+      document
+        .getElementById("newsletterForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("You're subscribed! Check your inbox for island inspiration.");
+          this.reset();
         });
     </script>
-</body>
+  </body>
 </html>
